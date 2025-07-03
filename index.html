@@ -90,6 +90,7 @@
       background: linear-gradient(90deg, #e22ba5, #e22ba58f);
       cursor: pointer;
       transition: all 0.2s ease;
+      display: block;
     }
     .pro-pic:hover{
       border-radius: 44px;
@@ -97,6 +98,7 @@
     .pro-name{
       font-size: 1.1rem;
       text-decoration: underline;
+      color:rgba(0, 0, 0, 0.900)
 
     }
     .pro-desc{
@@ -119,6 +121,11 @@
       font-style: italic;
       font-size: 0.9rem;
     }
+    @media only screen and (max-width: 600px){
+      .pro-pic{
+        display: none;
+      }
+    }
   </style>
   <body>
     <div class="main">
@@ -139,9 +146,12 @@
             Quick Links
           </p>
           <div class="links">
-            <a href="#">Resume</a>
-            <a href="#">Call & hire</a>
-            <a href="#">Message</a>
+            <a
+              href="https://drive.google.com/file/d/1ACXvwVSNpbEG60qA1KSFcl-smFT1FEF0"
+              >Resume</a
+            >
+            <a href="tel:+919517431474">Call & hire</a>
+            <a href="https://wa.me/+919517431474" target="_blank">Message</a>
             <a href="#projects">Projects</a>
           </div>
         </div>
@@ -150,8 +160,13 @@
             Socials
           </p>
           <div class="links">
-            <a href="#">X</a>
-            <a href="#">Linkedin</a>
+            <a href="https://x.com/priyanshuatX" target="_blank">X</a>
+            <a href="https://linkedin.com/in/priyanshuguptadev" target="_blank"
+              >Linkedin</a
+            >
+            <a href="https://github.com/priyanshuguptadev" target="_blank"
+              >Github</a
+            >
           </div>
         </div>
         <div>
@@ -179,58 +194,6 @@
           >
             projects
           </h2>
-          <!-- card -->
-          <div class="pro-card">
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div class="pro-pic"></div>
-              <div style="display: flex; flex-direction: column;">
-                <div class="pro-name">Vachan</div>
-                <div class="pro-desc">
-                  a plateform to turn goals into realities.
-                </div>
-              </div>
-            </div>
-            <a href="https://github.com/priyanshuguptadev">open</a>
-          </div>
-          <!-- card -->
-          <div class="pro-card">
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div class="pro-pic"></div>
-              <div style="display: flex; flex-direction: column;">
-                <div class="pro-name">Vachan</div>
-                <div class="pro-desc">
-                  a plateform to turn goals into realities.
-                </div>
-              </div>
-            </div>
-            <a href="https://github.com/priyanshuguptadev">open</a>
-          </div>
-          <!-- card -->
-          <div class="pro-card">
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div class="pro-pic"></div>
-              <div style="display: flex; flex-direction: column;">
-                <div class="pro-name">Vachan</div>
-                <div class="pro-desc">
-                  a plateform to turn goals into realities.
-                </div>
-              </div>
-            </div>
-            <a href="https://github.com/priyanshuguptadev">open</a>
-          </div>
-          <!-- card -->
-          <div class="pro-card">
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div class="pro-pic"></div>
-              <div style="display: flex; flex-direction: column;">
-                <div class="pro-name">Vachan</div>
-                <div class="pro-desc">
-                  a plateform to turn goals into realities.
-                </div>
-              </div>
-            </div>
-            <a href="https://github.com/priyanshuguptadev">open</a>
-          </div>
         </div>
         <div>
           <h2
@@ -241,15 +204,8 @@
           <!-- Blog -->
           <div class="blog-card">
             <div>
-              <div class="blog-title">AI explained to noobs by a noob.</div>
-              <div class="blog-date">07-07-2025</div>
-            </div>
-          </div>
-          <!-- Blog -->
-          <div class="blog-card">
-            <div>
-              <div class="blog-title">AI explained to noobs by a noob.</div>
-              <div class="blog-date">07-07-2025</div>
+              <div class="blog-title">LLMs explained to noobs by a noob.</div>
+              <div class="blog-date">future</div>
             </div>
           </div>
         </div>
@@ -259,5 +215,49 @@
         &copy; priyanshugupta
       </footer>
     </div>
+    <script>
+      const projects = [
+        {
+          title: "Paytm",
+          subtitle: "A full stack paytm app implementing basic features.",
+          github: "https://github.com/priyanshuguptadev/paytm",
+          livelink: "https://paytm-frontend-three.vercel.app"
+        },
+        {
+          title: "GaptoGrowth",
+          subtitle: "A typescript backend for a course selling app.",
+          github: "https://github.com/priyanshuguptadev/gaptogrowth",
+          livelink: "/"
+        },
+        {
+          title: "Medium Backend",
+          subtitle: "A typescript backend for popular blog site medium.",
+          github: "https://github.com/priyanshuguptadev/medium-backend",
+          livelink: "/"
+        },
+
+      ]
+      const projectsEl = document.getElementById("projects")
+      projects.forEach((p)=>{
+        const div = document.createElement("div")
+        const el = `
+          <div class="pro-card">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div class="pro-pic"></div>
+              <div style="display: flex; flex-direction: column;">
+                <a href="${p.github}" class="pro-name">${p.title}</a>
+                <div class="pro-desc">
+                  ${p.subtitle}
+                </div>
+              </div>
+            </div>
+            <a href="${p.livelink}" style="color: blue">open</a>
+          </div>
+                  `
+        div.innerHTML = el;
+
+        projectsEl.append(div)
+      })
+    </script>
   </body>
 </html>
