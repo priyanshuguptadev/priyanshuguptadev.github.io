@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="developer portfolio of a full stack developer Priyanshu Gupta"
+    />
+    <title>Priyanshu</title>
+  </head>
+  <style>
+    html{
+      scroll-behavior: smooth;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      min-height: 100vh;
+      background-color: #f5f5f5;
+      padding: 15px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+    .main{
+      max-width: 800px;
+      min-height: 100vh;
+      margin: 0 auto;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      padding: 15px;
+    }
+    .logo{
+      font-size: 28px;
+      font-weight: 500;
+      color: #8a2be2;
+      border-bottom: 1px solid #892be2;
+      padding-bottom: 10px;
+    }
+    .profile{
+      margin-top: 30px;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(120deg,#8a2be2, #892be217);
+      border-radius: 10px;
+      transition: all 0.2s ease-in;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .profile:hover{
+      border-radius: 100px;
+    }
+    .about{
+      margin-top: 10px;
+      font-size: 18px;
+      letter-spacing: 1px;
+      color: rgba(0, 0, 0, 0.603);
+      line-height: 35px;
+    }
+    .tag{
+      background-color: #f5f5f5;
+    }
+    .links{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+
+    }
+    .links a{
+      color: #551A8B;
+    }
+    .pro-card{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .pro-pic{
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #e22ba5, #e22ba58f);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .pro-pic:hover{
+      border-radius: 44px;
+    }
+    .pro-name{
+      font-size: 1.1rem;
+      text-decoration: underline;
+
+    }
+    .pro-desc{
+      color: rgba(0, 0, 0, 0.603);
+    }
+    .blog-card{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .blog-title{
+      font-size: 1.1rem;
+      text-decoration: underline;
+    }
+    .blog-date{
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <main>
+        <div class="profile"><span style="font-size: 40px;"> 😎 </span></div>
+        <div class="about">
+          hey👋, I am <span class="tag">Priyanshu Gupta</span>. I am a btech
+          <span class="tag">CSE</span> student. I build both web and native
+          apps. I personally like <span class="tag">nextjs</span> but started my
+          fullstack journey with <span class="tag">mern stack</span>. I use
+          <span class="tag">expo</span> to build react native apps. I also love
+          reading and understanding <span class="tag">GenAI</span>,
+          <span class="tag">LLMs</span>,
+          <span class="tag">Artificial Intelligence </span> overall.
+        </div>
+        <div>
+          <p style="font-size: 12px; font-weight: 500; margin-top: 20px;">
+            Quick Links
+          </p>
+          <div class="links">
+            <a href="#">Resume</a>
+            <a href="#">Call & hire</a>
+            <a href="#">Message</a>
+            <a href="#projects">Projects</a>
+          </div>
+        </div>
+        <div>
+          <p style="font-size: 12px; font-weight: 500; margin-top: 20px;">
+            Socials
+          </p>
+          <div class="links">
+            <a href="#">X</a>
+            <a href="#">Linkedin</a>
+          </div>
+        </div>
+        <div>
+          <p style="font-size: 12px; font-weight: 500; margin-top: 20px;">
+            Skills
+          </p>
+          <div class="links">
+            <a href="#">html5</a>
+            <a href="#">css3</a>
+            <a href="#">javascript</a>
+            <a href="#">react</a>
+            <a href="#">mongodb</a>
+            <a href="#">expressjs</a>
+            <a href="#">nextjs</a>
+            <a href="#">drizzle orm</a>
+            <a href="#">postgres</a>
+            <a href="#">honojs</a>
+            <a href="#">git & github</a>
+            <a href="/">vercel</a>
+          </div>
+        </div>
+        <div class="projects" id="projects">
+          <h2
+            style="color: #892be2; margin-top: 30px; font-weight: 500; letter-spacing: 2px;"
+          >
+            projects
+          </h2>
+          <!-- card -->
+          <div class="pro-card">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div class="pro-pic"></div>
+              <div style="display: flex; flex-direction: column;">
+                <div class="pro-name">Vachan</div>
+                <div class="pro-desc">
+                  a plateform to turn goals into realities.
+                </div>
+              </div>
+            </div>
+            <a href="https://github.com/priyanshuguptadev">open</a>
+          </div>
+          <!-- card -->
+          <div class="pro-card">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div class="pro-pic"></div>
+              <div style="display: flex; flex-direction: column;">
+                <div class="pro-name">Vachan</div>
+                <div class="pro-desc">
+                  a plateform to turn goals into realities.
+                </div>
+              </div>
+            </div>
+            <a href="https://github.com/priyanshuguptadev">open</a>
+          </div>
+          <!-- card -->
+          <div class="pro-card">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div class="pro-pic"></div>
+              <div style="display: flex; flex-direction: column;">
+                <div class="pro-name">Vachan</div>
+                <div class="pro-desc">
+                  a plateform to turn goals into realities.
+                </div>
+              </div>
+            </div>
+            <a href="https://github.com/priyanshuguptadev">open</a>
+          </div>
+          <!-- card -->
+          <div class="pro-card">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div class="pro-pic"></div>
+              <div style="display: flex; flex-direction: column;">
+                <div class="pro-name">Vachan</div>
+                <div class="pro-desc">
+                  a plateform to turn goals into realities.
+                </div>
+              </div>
+            </div>
+            <a href="https://github.com/priyanshuguptadev">open</a>
+          </div>
+        </div>
+        <div>
+          <h2
+            style="color: #892be2; margin-top: 30px; font-weight: 500; letter-spacing: 2px;"
+          >
+            blogs
+          </h2>
+          <!-- Blog -->
+          <div class="blog-card">
+            <div>
+              <div class="blog-title">AI explained to noobs by a noob.</div>
+              <div class="blog-date">07-07-2025</div>
+            </div>
+          </div>
+          <!-- Blog -->
+          <div class="blog-card">
+            <div>
+              <div class="blog-title">AI explained to noobs by a noob.</div>
+              <div class="blog-date">07-07-2025</div>
+            </div>
+          </div>
+        </div>
+        <a href="#">Back to Top</a>
+      </main>
+      <footer style="text-align: center; margin: 30px 0 0;">
+        &copy; priyanshugupta
+      </footer>
+    </div>
+  </body>
+</html>
